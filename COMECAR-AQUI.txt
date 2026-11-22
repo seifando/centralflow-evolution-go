@@ -1,0 +1,13 @@
+centralflow-evolution-go
+
+1. Crie um repositorio Public chamado centralflow-evolution-go na conta seifando.
+2. Extraia o ZIP e envie o CONTEUDO da pasta, incluindo .github/workflows, para a raiz.
+3. Commit em main > Actions > validacao verde.
+4. Actions > Publish validated image to GHCR > Run workflow.
+5. Copie o digest do Summary e torne o Package publico.
+6. EasyPanel > Fonte > Imagem Docker > imagem publicada > Salvar > Implantar.
+7. CentralFlow > WhatsApp > Evolution GO > validar URL/chave > sincronizar instancias.
+8. Canais e Status > Configuracao > Consultar suporte > Canais > Sincronizar canais existentes.
+
+Nao selecione fonte GitHub/Dockerfile no EasyPanel. Leia README.md antes de instalar.
+A imagem ainda precisa ser publicada e validada no GitHub.

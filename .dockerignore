@@ -1,0 +1,12 @@
+.git
+.github
+**/node_modules
+**/vendor
+**/__pycache__
+**/*.pyc
+.env
+.env.*
+*.pem
+*.key
+tests
+docs

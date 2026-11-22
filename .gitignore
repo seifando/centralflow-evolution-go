@@ -1,0 +1,15 @@
+node_modules/
+vendor/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+configuracao/
+arquivos/
+docs/test-results/
+__pycache__/
+*.pyc
+*.zip
+.DS_Store
+Thumbs.db

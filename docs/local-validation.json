@@ -1,0 +1,27 @@
+{
+  "centralflow_extension_version": "0.6.1",
+  "upstream_version": "0.7.2",
+  "repository_installer_tests": {
+    "passed": 8,
+    "failed": 0
+  },
+  "github_workflows": {
+    "validator": "actionlint",
+    "files": 2,
+    "errors": 0
+  },
+  "full_linux_image_build": "pending: run the supplied GitHub Actions workflow",
+  "real_whatsapp_account": "not connected or tested",
+  "production_deployment": "not performed by this package",
+  "go_sdk_component_tests": {
+    "passed": 4,
+    "failed": 0,
+    "tests": [
+      "TestCapabilities",
+      "TestDisconnectedDoesNotCallNativeSend",
+      "TestMediaBounds",
+      "TestRecipients"
+    ],
+    "scope": "Real pinned WhatsMeow SDK and add-on compiled with native service signature stubs; not a full upstream application build."
+  }
+}

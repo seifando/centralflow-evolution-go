@@ -1,4 +1,4 @@
-# CentralFlow — Evolution GO 0.7.2
+# CentralFlow — Evolution GO 0.7.2 
 
 Extensão comunitária para canais do WhatsApp. O GitHub Actions compila a aplicação com a extensão e publica sua imagem no GHCR. O EasyPanel baixa a imagem pronta; a VPS não faz o build.
 

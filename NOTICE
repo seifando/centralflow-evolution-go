@@ -1,0 +1,7 @@
+CentralFlow community extension by seifando and contributors.
+Uses Evolution GO 0.7.2 from evolution-foundation.
+This project is independent and is not an official Evolution Foundation distribution.
+Root MIT license covers the original CentralFlow files only; upstream source,
+fixtures and dependencies retain their original licenses and notices in LICENSES.
+The additive WhatsMeow source file in the GO project is under MPL-2.0.
+Evolution names, logos, copyright notices and native licensing/activation remain unchanged.

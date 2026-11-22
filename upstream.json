@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/evolution-foundation/evolution-go",
+  "version": "0.7.2",
+  "commit": "9337afc47e10b86cc896a6f432240e40fee95dd1",
+  "whatsmeow": "v0.0.0-20260630180629-b572e5bcb92b",
+  "fixture_sha256": {
+    "pkg/routes/routes.go": "226d3c190b77b98dde4cf01f2e098b823f84cc7f4899d63cf27cc3ace4a559a9",
+    "pkg/sendMessage/service/send_service.go": "cf756fa86cbe1a4857f02006a85781be088cc30f91416276b0ff6ab951794a8f",
+    "pkg/sendMessage/handler/send_handler.go": "bd644b3219f85aeede5fca65e97f43581d211c5a06798bae938a4fd4c12c91c3",
+    "sdk.newsletter.go": "c3d9a15cb141a15dceb2197ba3ffd82bf574d852c7474f5fedf51faaeb1585ca"
+  }
+}
