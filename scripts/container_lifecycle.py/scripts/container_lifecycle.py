@@ -19,12 +19,12 @@ def docker(args):
         raise ContainerError('Docker command timed out: ' + args[0]) from error
 
 
-def state(name, run=docker):
-    result = run(['inspect', '--format', '{{json .State}}', name])
+def state( ame, run=docker):
+ result = run(['inspect', '--format', '{{json .State}}', name])
     if result.returncode:
         raise ContainerError('Cannot inspect container ' + name)
     try:
-        value = json.loads(result.stdout)
+ value = json.loads(result.stdout)
         if not isinstance(value, dict):
             raise ValueError('state is not an object')
         return value
