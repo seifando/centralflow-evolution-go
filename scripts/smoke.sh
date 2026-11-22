@@ -7,7 +7,9 @@ prefix="cf-ci-${GITHUB_RUN_ID:-test}-${RANDOM}"
 db="${prefix}-db"; redis="${prefix}-redis"; app="${prefix}-app"
 cleanup() {
   status=$?
-  if [[ "$status" != 0 ]]; then docker logs --tail 60 "$app" 2>/dev/null || true; fi
+  if [[ "$status" != 0 ]]; then
+    python3 scripts/container_lifecycle.py diagnose "$app" "$db" "$redis" || true
+  fi
   docker rm -f "$app" "$db" "$redis" >/dev/null 2>&1 || true
   docker network rm "$prefix" >/dev/null 2>&1 || true
   exit "$status"
@@ -30,6 +32,6 @@ docker run -d --name "$app" --network "$prefix" --memory 1536m -p 127.0.0.1::808
   -e 'POSTGRES_USERS_DB=postgresql://cf_ci:cf_ci_disposable_only@db:5432/centralflow_ci?sslmode=disable' \
   -e CLIENT_NAME=centralflow-ci -e CONNECT_ON_STARTUP=false -e MINIO_ENABLED=false \
   -e AMQP_GLOBAL_ENABLED=false -e AMQP_URL= -e WEBHOOK_URL= -e WADEBUG=ERROR "$TEST_IMAGE" >/dev/null
-docker exec "$app" test -d /opt/centralflow-source
+python3 scripts/container_lifecycle.py wait "$app"
 port="$(docker port "$app" 8080/tcp | awk -F: 'NR==1{print $NF}')"
 python3 scripts/probe.py "http://127.0.0.1:$port" go
